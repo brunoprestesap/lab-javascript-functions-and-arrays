@@ -70,9 +70,13 @@ function sum(arg) {
     } else if (typeof arg[i] === 'boolean' && arg[i] === false) {
       soma += 0;
     }
+    if (typeof arg[i] === 'object') {
+      return "Error"
+
+    }
   }
 
-  console.log(soma);
+  return soma;
 }
 
 sum(mixedArr);
