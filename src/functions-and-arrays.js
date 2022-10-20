@@ -71,32 +71,68 @@ function sum(arg) {
       soma += 0;
     }
     if (typeof arg[i] === 'object') {
-      return "Error"
-
+      throw new Error("Unsupported data type sir or ma'am")
+      //return "Error"
     }
   }
 
   return soma;
 }
 
-sum(mixedArr);
-
-
 
 // Iteration #4: Calculate the average
 // Level 1: Array of numbers
 const numbersAvg = [2, 6, 9, 10, 7, 4, 1, 9];
 
-function averageNumbers() {}
+function averageNumbers(arg) {
+
+  if (arg.length === 0) {
+    return null;
+  }
+
+  let sum = sumNumbers(arg);
+  let avg = sum / arg.length;
+
+  return avg;
+
+}
 
 
 // Level 2: Array of strings
 const wordsArr = ['seat', 'correspond', 'linen', 'motif', 'hole', 'smell', 'smart', 'chaos', 'fuel', 'palace'];
 
-function averageWordLength() { }
+function averageWordLength(arg) { 
+  
+  let avgLength, soma = 0;
 
+  if (arg.length === 0) {
+    return null;
+  }
+
+  for (let i = 0; i < arg.length; i++) {
+
+    soma += arg[i].length;
+  }
+
+  avgLength = soma / arg.length;
+
+  return avgLength;
+}
+
+
+// should return: 5.7
 // Bonus - Iteration #4.1
-function avg() {}
+function avg(arg) {
+  let media = 0;
+
+  if(arg.length === 0) {
+    return null;
+  }
+  
+  media = sum(arg) / arg.length;
+
+  return media;
+}
 
 // Iteration #5: Unique arrays
 const wordsUnique = [
