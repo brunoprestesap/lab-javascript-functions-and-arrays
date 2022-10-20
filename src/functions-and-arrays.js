@@ -55,7 +55,27 @@ function sumNumbers(arg) {
 const mixedArr = [6, 12, 'miami', 1, true, 'barca', '200', 'lisboa', 8, 10];
 
 // Iteration #3.1 Bonus:
-function sum() {}
+function sum(arg) {
+  let soma = 0;
+
+  for(let i = 0; i < arg.length; i++) {
+    if (typeof arg[i] === 'number') {
+      soma += arg[i];
+    }
+    if (typeof arg[i] === 'string') {
+      soma += arg[i].length;
+    }
+    if (typeof arg[i] === 'boolean' && arg[i] === true) {
+      soma += 1;
+    } else if (typeof arg[i] === 'boolean' && arg[i] === false) {
+      soma += 0;
+    }
+  }
+
+  console.log(soma);
+}
+
+sum(mixedArr);
 
 
 
