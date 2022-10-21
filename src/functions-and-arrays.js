@@ -158,7 +158,7 @@ function uniquifyArray(arg) {
   const newArray = [];
 
   if (arg.length === 0) {
-    return null;
+    return null
   }
 
   for (let i = 0; i < arg.length; i++) {
@@ -208,7 +208,19 @@ const wordsCount = [
   "matter",
 ];
 
-function howManyTimes() {}
+function howManyTimes(matriz, palavra) {
+  let count = 0;
+
+  for (let i = 0; i < matriz.length; i++) {
+    if (matriz[i] === palavra) {
+      count += 1;
+    }
+  }
+
+  return count;
+}
+
+console.log(howManyTimes(wordsCount, "matter"));
 
 // Iteration #8: Bonus
 const matrix = [
