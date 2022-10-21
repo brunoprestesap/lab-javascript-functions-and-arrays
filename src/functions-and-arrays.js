@@ -158,7 +158,7 @@ function uniquifyArray(arg) {
   const newArray = [];
 
   if (arg.length === 0) {
-    return null
+    return null;
   }
 
   for (let i = 0; i < arg.length; i++) {
@@ -183,15 +183,12 @@ const wordsFind = [
 ];
 
 function doesWordExist(arg1, arg2) {
-
   if (arg1 === undefined || arg2 === undefined) {
-    return null
+    return null;
   } else {
     return arg1.includes(arg2);
   }
 }
-
-
 
 // Iteration #7: Count repetition
 const wordsCount = [
@@ -219,8 +216,6 @@ function howManyTimes(matriz, palavra) {
 
   return count;
 }
-
-console.log(howManyTimes(wordsCount, "matter"));
 
 // Iteration #8: Bonus
 const matrix = [
@@ -288,7 +283,7 @@ const matrix = [
   ],
 ];
 
-function greatestProduct() {}
+function greatestProduct(arg) {}
 
 // The following is required to make unit tests work.
 /* Environment setup. Do not modify the below code. */
