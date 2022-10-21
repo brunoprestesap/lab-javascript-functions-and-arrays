@@ -170,8 +170,6 @@ function uniquifyArray(arg) {
   return newArray;
 }
 
-console.log(uniquifyArray(wordsUnique));
-
 // Iteration #6: Find elements
 const wordsFind = [
   "machine",
@@ -184,7 +182,16 @@ const wordsFind = [
   "disobedience",
 ];
 
-function doesWordExist() {}
+function doesWordExist(arg1, arg2) {
+
+  if (arg1 === undefined || arg2 === undefined) {
+    return null
+  } else {
+    return arg1.includes(arg2);
+  }
+}
+
+
 
 // Iteration #7: Count repetition
 const wordsCount = [
